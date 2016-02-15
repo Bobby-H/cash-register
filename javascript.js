@@ -4,18 +4,17 @@ var cashRegister = {
     this.total += itemCost;
   },
   scan: function(item){
-    switch (item) {
-      case "eggs": this.add(0.98); break
-      case "milk": this.add(1.23); break
-      case "magazine": this.add(4.99); break
-      case "chocolate": this.add(0.45); break
+    switch (item, quantity) {
+      case "eggs": this.add(0.98 * quantity); break
+      case "milk": this.add(1.23 * quantity); break
+      case "magazine": this.add(4.99 * quantity); break
+      case "chocolate": this.add(0.45 * quantity); break
     }
     return true;
   }
 }
-cashRegister.scan("eggs");
-cashRegister.scan("milk");
-cashRegister.scan("magazine");
-cashRegister.scan("chocolate");
-cashRegister.scan("chocolate");
+
+cashRegister.scan("eggs", 2);
+cashRegister.scan("milk", 1);
+cashRegister.scan("magazine", 1);
 console.log('your total is ' + cashRegister.total);
