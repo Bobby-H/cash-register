@@ -1,3 +1,10 @@
+function StaffMember(name, discountPercent){
+  this.name = name;
+  this.discountPercent = discountPercent;
+}
+
+var bobby = new StaffMember("Bobby", 20);
+
 var cashRegister = {
   total: 0,
   lastTransactionAmount: 0,
@@ -18,10 +25,11 @@ var cashRegister = {
   }
 }
 
-cashRegister.scan("eggs", 2);
-cashRegister.scan("milk", 1);
-cashRegister.scan("magazine", 2);
-cashRegister.voidLastTransaction();
-cashRegister.scan("magazine", 1);
 
-console.log('your total is ' + cashRegister.total);
+// cashRegister.scan("eggs", 2);
+// cashRegister.scan("milk", 1);
+// cashRegister.scan("magazine", 2);
+// cashRegister.voidLastTransaction();
+// cashRegister.scan("magazine", 1);
+//
+// console.log('your total is ' + cashRegister.total);
