@@ -22,7 +22,8 @@ var cashRegister = {
   },
   voidLastTransaction: function(lastTransactionAmount, total) {
     this.total -= this.lastTransactionAmount;
-  }
+  },
+  //applyDiscount will go here
 }
 
 
